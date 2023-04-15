@@ -1,0 +1,319 @@
+//
+//Written by GowinSynthesis
+//Product Version "GowinSynthesis V1.9.8.10"
+//Fri Apr 14 19:25:12 2023
+
+//Source file index table:
+//file0 "\C:/Users/tosh/Desktop/fpga_odev/Fpga_Bellek/src/Bellek_Tasarim.v"
+`timescale 100 ps/100 ps
+module memory_design (
+  clk,
+  vin,
+  address,
+  write,
+  vout
+)
+;
+input clk;
+input [15:0] vin;
+input [3:0] address;
+input write;
+output [15:0] vout;
+wire clk_d;
+wire write_d;
+wire n17_1;
+wire n18_1;
+wire n19_1;
+wire n20_1;
+wire n13_1;
+wire n14_1;
+wire n15_1;
+wire n16_1;
+wire n9_1;
+wire n10_1;
+wire n11_1;
+wire n12_1;
+wire n5_2;
+wire n6_1;
+wire n7_1;
+wire n8_1;
+wire n37_7;
+wire [15:0] vin_d;
+wire [3:0] address_d;
+wire [15:0] vout_d;
+wire VCC;
+wire GND;
+  IBUF clk_ibuf (
+    .O(clk_d),
+    .I(clk) 
+);
+  IBUF vin_0_ibuf (
+    .O(vin_d[0]),
+    .I(vin[0]) 
+);
+  IBUF vin_1_ibuf (
+    .O(vin_d[1]),
+    .I(vin[1]) 
+);
+  IBUF vin_2_ibuf (
+    .O(vin_d[2]),
+    .I(vin[2]) 
+);
+  IBUF vin_3_ibuf (
+    .O(vin_d[3]),
+    .I(vin[3]) 
+);
+  IBUF vin_4_ibuf (
+    .O(vin_d[4]),
+    .I(vin[4]) 
+);
+  IBUF vin_5_ibuf (
+    .O(vin_d[5]),
+    .I(vin[5]) 
+);
+  IBUF vin_6_ibuf (
+    .O(vin_d[6]),
+    .I(vin[6]) 
+);
+  IBUF vin_7_ibuf (
+    .O(vin_d[7]),
+    .I(vin[7]) 
+);
+  IBUF vin_8_ibuf (
+    .O(vin_d[8]),
+    .I(vin[8]) 
+);
+  IBUF vin_9_ibuf (
+    .O(vin_d[9]),
+    .I(vin[9]) 
+);
+  IBUF vin_10_ibuf (
+    .O(vin_d[10]),
+    .I(vin[10]) 
+);
+  IBUF vin_11_ibuf (
+    .O(vin_d[11]),
+    .I(vin[11]) 
+);
+  IBUF vin_12_ibuf (
+    .O(vin_d[12]),
+    .I(vin[12]) 
+);
+  IBUF vin_13_ibuf (
+    .O(vin_d[13]),
+    .I(vin[13]) 
+);
+  IBUF vin_14_ibuf (
+    .O(vin_d[14]),
+    .I(vin[14]) 
+);
+  IBUF vin_15_ibuf (
+    .O(vin_d[15]),
+    .I(vin[15]) 
+);
+  IBUF address_0_ibuf (
+    .O(address_d[0]),
+    .I(address[0]) 
+);
+  IBUF address_1_ibuf (
+    .O(address_d[1]),
+    .I(address[1]) 
+);
+  IBUF address_2_ibuf (
+    .O(address_d[2]),
+    .I(address[2]) 
+);
+  IBUF address_3_ibuf (
+    .O(address_d[3]),
+    .I(address[3]) 
+);
+  IBUF write_ibuf (
+    .O(write_d),
+    .I(write) 
+);
+  OBUF vout_0_obuf (
+    .O(vout[0]),
+    .I(vout_d[0]) 
+);
+  OBUF vout_1_obuf (
+    .O(vout[1]),
+    .I(vout_d[1]) 
+);
+  OBUF vout_2_obuf (
+    .O(vout[2]),
+    .I(vout_d[2]) 
+);
+  OBUF vout_3_obuf (
+    .O(vout[3]),
+    .I(vout_d[3]) 
+);
+  OBUF vout_4_obuf (
+    .O(vout[4]),
+    .I(vout_d[4]) 
+);
+  OBUF vout_5_obuf (
+    .O(vout[5]),
+    .I(vout_d[5]) 
+);
+  OBUF vout_6_obuf (
+    .O(vout[6]),
+    .I(vout_d[6]) 
+);
+  OBUF vout_7_obuf (
+    .O(vout[7]),
+    .I(vout_d[7]) 
+);
+  OBUF vout_8_obuf (
+    .O(vout[8]),
+    .I(vout_d[8]) 
+);
+  OBUF vout_9_obuf (
+    .O(vout[9]),
+    .I(vout_d[9]) 
+);
+  OBUF vout_10_obuf (
+    .O(vout[10]),
+    .I(vout_d[10]) 
+);
+  OBUF vout_11_obuf (
+    .O(vout[11]),
+    .I(vout_d[11]) 
+);
+  OBUF vout_12_obuf (
+    .O(vout[12]),
+    .I(vout_d[12]) 
+);
+  OBUF vout_13_obuf (
+    .O(vout[13]),
+    .I(vout_d[13]) 
+);
+  OBUF vout_14_obuf (
+    .O(vout[14]),
+    .I(vout_d[14]) 
+);
+  OBUF vout_15_obuf (
+    .O(vout[15]),
+    .I(vout_d[15]) 
+);
+  DFF vout_14_s1 (
+    .Q(vout_d[14]),
+    .D(n6_1),
+    .CLK(clk_d) 
+);
+  DFF vout_13_s1 (
+    .Q(vout_d[13]),
+    .D(n7_1),
+    .CLK(clk_d) 
+);
+  DFF vout_12_s1 (
+    .Q(vout_d[12]),
+    .D(n8_1),
+    .CLK(clk_d) 
+);
+  DFF vout_11_s1 (
+    .Q(vout_d[11]),
+    .D(n9_1),
+    .CLK(clk_d) 
+);
+  DFF vout_10_s1 (
+    .Q(vout_d[10]),
+    .D(n10_1),
+    .CLK(clk_d) 
+);
+  DFF vout_9_s1 (
+    .Q(vout_d[9]),
+    .D(n11_1),
+    .CLK(clk_d) 
+);
+  DFF vout_8_s1 (
+    .Q(vout_d[8]),
+    .D(n12_1),
+    .CLK(clk_d) 
+);
+  DFF vout_7_s1 (
+    .Q(vout_d[7]),
+    .D(n13_1),
+    .CLK(clk_d) 
+);
+  DFF vout_6_s1 (
+    .Q(vout_d[6]),
+    .D(n14_1),
+    .CLK(clk_d) 
+);
+  DFF vout_5_s1 (
+    .Q(vout_d[5]),
+    .D(n15_1),
+    .CLK(clk_d) 
+);
+  DFF vout_4_s1 (
+    .Q(vout_d[4]),
+    .D(n16_1),
+    .CLK(clk_d) 
+);
+  DFF vout_3_s1 (
+    .Q(vout_d[3]),
+    .D(n17_1),
+    .CLK(clk_d) 
+);
+  DFF vout_2_s1 (
+    .Q(vout_d[2]),
+    .D(n18_1),
+    .CLK(clk_d) 
+);
+  DFF vout_1_s1 (
+    .Q(vout_d[1]),
+    .D(n19_1),
+    .CLK(clk_d) 
+);
+  DFF vout_0_s1 (
+    .Q(vout_d[0]),
+    .D(n20_1),
+    .CLK(clk_d) 
+);
+  DFF vout_15_s2 (
+    .Q(vout_d[15]),
+    .D(n5_2),
+    .CLK(clk_d) 
+);
+  RAM16S4 ram_ram_0_0_s (
+    .DO({n17_1,n18_1,n19_1,n20_1}),
+    .DI(vin_d[3:0]),
+    .AD(address_d[3:0]),
+    .WRE(write_d),
+    .CLK(n37_7) 
+);
+  RAM16S4 ram_ram_0_1_s (
+    .DO({n13_1,n14_1,n15_1,n16_1}),
+    .DI(vin_d[7:4]),
+    .AD(address_d[3:0]),
+    .WRE(write_d),
+    .CLK(n37_7) 
+);
+  RAM16S4 ram_ram_0_2_s (
+    .DO({n9_1,n10_1,n11_1,n12_1}),
+    .DI(vin_d[11:8]),
+    .AD(address_d[3:0]),
+    .WRE(write_d),
+    .CLK(n37_7) 
+);
+  RAM16S4 ram_ram_0_3_s (
+    .DO({n5_2,n6_1,n7_1,n8_1}),
+    .DI(vin_d[15:12]),
+    .AD(address_d[3:0]),
+    .WRE(write_d),
+    .CLK(n37_7) 
+);
+  INV n37_s2 (
+    .O(n37_7),
+    .I(clk_d) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* memory_design */

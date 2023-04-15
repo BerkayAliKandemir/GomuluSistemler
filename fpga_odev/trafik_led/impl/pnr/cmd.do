@@ -1,0 +1,11 @@
+-d C:\Users\tosh\Desktop\fpga_odev\trafik_led\impl\gwsynthesis\berkayalikandemir.vg
+-p GW1NZ-1-QFN48-6
+-pn GW1NZ-LV1QN48C6/I5
+-cst C:\Users\tosh\Desktop\fpga_odev\trafik_led\src\berkayalikandemir.cst
+-cfg C:\Users\tosh\Desktop\fpga_odev\trafik_led\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-route_maxfan 10
